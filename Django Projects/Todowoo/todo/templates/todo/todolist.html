@@ -1,0 +1,18 @@
+{% extends 'todo/base.html' %}
+{% block content %}
+<div class="container jumbotron">
+    <h3 class="display-3" style="text-align: center;">Create Todo</h3><br>
+    <form method="POST" class="form-group">
+        <div class="form-group">
+            {%csrf_token%}
+            {{form.as_p}}
+            {% if error %}
+            <div class="alert alert-danger" role="alert">
+                {{error}}
+            </div>
+            {% endif %}
+            <button class="btn btn-primary" type="submit">Create</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

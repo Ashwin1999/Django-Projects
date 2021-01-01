@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+
+// global variables
+:root {
+    --h1: 100vh;
+    --h2: 50vh;
+    --fs1: 18px;
+    --fs2: 14px;
+}
+
+// main style
+body{
+    margin: 0;
+    min-width: 100%;
+}
+
+
+a{
+    text-decoration: none;
+    color: teal;
+}
+
+a:hover{
+    color: darkslategray;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+
+    section{
+        height: var(--h1);
+        font-size: var(--fs1);
+        // border-bottom: solid 1px black;
+    }
+}
+
+.header, .about, .skills, .contacts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    #cover-image{
+        flex: 0.6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            pointer-events: none;
+            width: 75%;
+        }
+    }
+    #cover-text{
+        flex: 0.4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #cover-text-content{
+            padding-right: 25px;
+            #hello{
+                font-size: 60px;
+                color: darkslategray;
+            }
+            #role{
+                font-size: 20px;
+                color: teal;
+            }
+        }
+    }
+    #about-text{
+        color: darkslategray;
+        flex: 0.6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        padding: 0 20px;
+    }
+    #about-image{
+        flex: 0.4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            pointer-events: none;
+            width: 80%;
+        }
+    }
+    #skill-image{
+        flex: 0.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            pointer-events: none;
+            width: 75%;
+            // margin-left: 150px;
+        }
+    }
+    #skill-content{
+        flex: 0.5;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        font-size: 22px;
+        width: 100%;
+        #progressbars{
+            width: 100%;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .pBar{
+                width: 100%;
+                #skill-title{
+                    font-size: 50px;
+                    color: darkslategray;
+                }
+                .skill-desc{
+                    width: 50%;
+                }
+                .lang{
+                    font-size: 20px;
+                }
+                #myProgress {
+                    border-radius: 15px;
+                    width: 75%;
+                    background-color: rgb(204, 204, 204);
+                }
+                .myBar {
+                    border-radius: 15px;
+                    width: 0%;
+                    height: 10px;
+                    background-color: rgb(108, 99, 255);
+                }
+            }
+        }
+    }
+
+    #contact-image{
+        flex: 0.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            pointer-events: none;
+            width: 95%;
+        }
+    }
+    #contact-info{
+        flex: 0.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #contact-info-content{
+            padding-right: 25px;
+            #contact-title{
+                font-size: 80px;
+                color: darkslategray;
+            }
+            #email{
+                font-size: 40px;
+                color: teal;
+            }
+            #phone{
+                font-size: 40px;
+                color: teal;
+            }
+            #social{
+                font-size: 40px;
+                .ico{
+                    padding-left: 35px;
+                }
+            }
+        }
+    }
+}
+
+.github-stats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p{
+        font-size: 60px;
+        color: darkslategray;
+    }
+    .calendar{
+            border: 0px;
+        }
+    #git-calendar{
+        width: 75%;
+    }
+}
+
+.projects{
+    #project-title{
+        font-size: 60px;
+        color: darkslategray;
+    }
+    #project-container{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(3,1fr);
+        .child{
+            margin-left: 50px;
+            padding-top: 100px;
+            img{
+                width: 75%;
+            }
+        }
+    }
+}
+
+// for different screens
+// landscape(mostly ipad and not mobiles)
+@media(orientation:landscape){
+    .skills{
+        #skill-content{
+            font-size: 10px;
+            #progressbars{
+                .pBar{
+                    #skill-title{
+                        font-size: 40px;
+                    }
+                    .lang{
+                        font-size: 16px;
+                    }
+                    .myBar {
+                        height: 8px;
+                    }
+                }
+            }
+        }
+    }
+    .projects{
+        #project-title{
+            font-size: 50px;
+            // font-weight: lighter;
+        }
+        #project-container{
+            .child{
+                margin-left: 90px;
+                padding-top: 100px;
+                img{
+                    width: 75%;
+                }
+            }
+        }
+    } 
+}
+
+// below-1300px
+@media(max-width:1300px){
+    .contacts{
+        #contact-info{
+            #contact-info-content{
+                padding-right: 0px;
+                #contact-title{
+                    font-size: 40px;
+                }
+                #email{
+                    font-size: 30px;
+                }
+                #phone{
+                    font-size: 30px;
+                }
+                #social{
+                    font-size: 20px;
+                    .ico{
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+        .projects{
+            #project-title{
+                font-size: 40px;
+                // font-weight: lighter;
+            }
+        }
+    }
+
+    .github-stats{
+        p{
+            font-size: 30px;
+        }
+    }
+}
+
+// below-750px
+@media(max-width:750px){
+    .home{
+        section{
+            height: var(--h2);
+        }
+    }
+    .header, .about, .skills, .contacts{
+        #cover-text{
+            #cover-text-content{
+                padding-right: 0px;
+                #hello{
+                    font-size: 30px;
+                }
+                #role{
+                    font-size: 15px;
+                }
+            }
+        }
+        #about-text{
+            font-size: 15px;
+        }
+        #skill-content{
+            font-size: 10px;
+            #progressbars{
+                .pBar{
+                    #skill-title{
+                        font-size: 25px;
+                    }
+                    .lang{
+                        font-size: 15px;
+                    }
+                    .myBar {
+                        height: 5px;
+                    }
+                }
+            }
+        }
+        #contact-info{
+            #contact-info-content{
+                padding-right: 0px;
+                #contact-title{
+                    font-size: 40px;
+                }
+                #email{
+                    font-size: 20px;
+                }
+                #phone{
+                    font-size: 20px;
+                }
+                #social{
+                    font-size: 20px;
+                    .ico{
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .projects{
+        #project-title{
+            font-size: 30px;
+        }
+        #project-container{
+            .child{
+                padding-top: 50px;
+                img{
+                    width: 75%;
+                }
+            }
+        }
+    }
+    .github-stats{
+        p{
+            font-size: 30px;
+        }
+    }
+}
+
+// below-500px
+@media(max-width:500px){
+    .home{
+        section{
+            height: var(--h2);
+        }
+    }
+    .header, .about, .skills, .contacts{
+        #cover-text{
+            #cover-text-content{
+                #hello{
+                    font-size: 20px;
+                }
+                #role{
+                    font-size: 10px;
+                }
+            }
+        }
+        #about-text{
+            font-size: 10px;
+        }
+        #skill-content{
+            font-size: 10px;
+            #progressbars{
+                .pBar{
+                    #skill-title{
+                        font-size: 20px;
+                    }
+                    .lang{
+                        font-size: 10px;
+                    }
+                    .myBar {
+                        height: 5px;
+                    }
+                }
+            }
+        }
+        #contact-info{
+            #contact-info-content{
+                padding-right: 0px;
+                #contact-title{
+                    font-size: 20px;
+                }
+                #email{
+                    font-size: 10px;
+                }
+                #phone{
+                    font-size: 10px;
+                }
+                #social{
+                    font-size: 10px;
+                    .ico{
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .projects{
+        #project-title{
+            font-size: 20px;
+        }
+        #project-container{
+            .child{
+                padding-top: 40px;
+                margin-left: 15px;
+                img{
+                    width: 75%;
+                }
+            }
+        }
+    }
+    .github-stats{
+        p{
+            font-size: 20px;
+        }
+    }
+}

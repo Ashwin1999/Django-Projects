@@ -1,0 +1,27 @@
+{% extends 'todo/base.html' %}
+{% block content %}
+<div class="container" style="text-align: center;">
+    {% if todos %}
+    <h3 class="display-3" style="text-align: center;">Your Todos List</h3><br>
+    {% for todo in todos %}
+    <a href="{% url 'detailview' todo.id %}" style="text-decoration: none;">
+        {% if todo.important %}
+        <div class="alert alert-danger">
+            {% else %}
+            <div class="alert alert-info">
+                {% endif %}
+                <h4 class="display-4">
+                    {{todo.title}}
+                </h4>
+                <p class="lead"><small>{{todo.created}}</small></p>
+                <hr>
+                <p class="lead">{{todo.todo}}</p>
+            </div></a>
+    {% endfor %}
+    {% else %}
+    <h3 class="display-3" style="text-align: center;">Your Todos List is
+        Empty!!!
+    </h3><br>
+    {% endif %}
+</div>
+{% endblock %}

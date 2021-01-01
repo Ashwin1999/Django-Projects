@@ -1,0 +1,131 @@
+{% extends 'myApp/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- 1 -->
+<!-- header -->
+<section class="header" data-aos="fade-down">
+    <div id="cover-image">
+        <img src="{%static './images/charts.svg'%}" alt="cover-image">
+    </div>
+    <div id="cover-text">
+        <div id="cover-text-content">
+            <p id="hello" class="user-select-none">Hi! I'm Ashwin</p>
+            <p id="role" class="user-select-none">Data scientist/Django developer</p>
+        </div>
+    </div>
+</section>
+<!-- 2 -->
+<!-- about -->
+<section class="about" data-aos="fade-up">
+    <div id="about-text">
+        <p class="user-select-none">Hey fellow sapiens! This is Ashwin Bala. Data science and deep learning is
+            my jam. Apart from data
+            science, I also have
+            experience making web applications. Django is my go-to framework.</p>
+    </div>
+    <div id="about-image">
+        <img src="{%static './images/about.svg'%}" alt="about-image">
+    </div>
+</section>
+<!-- 3 -->
+<!-- skills -->
+<section class="skills" onmouseenter="skills()" data-aos="fade-up">
+    <div id="skill-image">
+        <img src="{%static './images/skills-2.svg'%}" alt="skill-image">
+    </div>
+    <div id="skill-content">
+        <div id="progressbars">
+            <div class="pBar">
+                <p id="skill-title" class="user-select-none">Skill</p>
+            </div>
+            <div class="pBar">
+                <span class="skill-desc">
+                    <span class="lang user-select-none">Python programming</span> (<span id="Bar1-span">0%</span>)
+                </span>
+                <div id="myProgress">
+                    <div class="myBar" id="Bar1"></div>
+                </div>
+            </div><br>
+            <div class="pBar">
+                <span class="skill-desc">
+                    <span class="lang user-select-none">Tensorflow</span> (<span id="Bar2-span">0%</span>)
+                </span>
+                <div id="myProgress">
+                    <div class="myBar" id="Bar2"></div>
+                </div>
+            </div><br>
+            <div class="pBar">
+                <span class="skill-desc">
+                    <span class="lang user-select-none">Django framework</span> (<span id="Bar3-span">0%</span>)
+                </span>
+                <div id="myProgress">
+                    <div class="myBar" id="Bar3"></div>
+                </div>
+            </div><br>
+            <div class="pBar">
+                <span class="skill-desc">
+                    <span class="lang user-select-none">JavaScript</span> (<span id="Bar4-span">0%</span>)
+                </span>
+                <div id="myProgress">
+                    <div class="myBar" id="Bar4"></div>
+                </div>
+            </div><br>
+            <div class="pBar">
+                <span class="skill-desc">
+                    <span class="lang user-select-none">HTML5/CSS3</span> (<span id="Bar5-span">0%</span>)
+                </span>
+                <div id="myProgress">
+                    <div class="myBar" id="Bar5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 4 -->
+<!-- projects -->
+<section class="projects" data-aos="fade-up"><br><br><br>
+    <p class="text-center user-select-none" id="project-title">My recent projects</p>
+    <div id="project-container" class="container">
+        <div class="child" id="c1"><a href="https://github.com/Ashwin1999//Stockcentric"><img
+                    src="{%static './images/stockcentric.jpg'%}" alt="proj"></a></div>
+        <div class="child" id="c1"><a href="https://github.com/Ashwin1999/Altreks"><img
+                    src="{%static './images/altreks.jpg'%}" alt="proj"></a></div>
+        <div class="child" id="c1"><a href="https://github.com/Ashwin1999"><img
+                    src="{%static './images/comingSoon.jpg'%}" alt="proj"></a></div>
+        <!-- <div class="child" id="c1"><a href="#4"><img src="./images/proj.jpg" alt="proj"></a></div>
+                <div class="child" id="c1"><a href="#5"><img src="./images/proj.jpg" alt="proj"></a></div>
+                <div class="child" id="c1"><a href="#6"><img src="./images/proj.jpg" alt="proj"></a></div> -->
+    </div>
+</section>
+<!-- 5 -->
+<!-- github stats -->
+<section class="github-stats" data-aos="fade-up">
+    <p class="text-center user-select-none">Github contribution</p>
+    <div class="calendar" id="git-calendar">
+        <!-- Loading stuff -->
+        Loading the data just for you.
+    </div>
+</section>
+<!-- 6 -->
+<!-- contact info -->
+<section class="contacts" data-aos="fade-up">
+    <div id="contact-info">
+        <div id="contact-info-content">
+            <p id="contact-title" class="user-select-none">Contact me at</p>
+            <p id="email" class="user-select-none">acchu99@gmail.com</p>
+            <p id="phone" class="user-select-none">+91 8220546047</p>
+            <p id="social">
+                <a href="https://linkedin.com/in/ashwin-bala1999/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/ashwin1999"><i class="fab fa-github ico"></i></a>
+                <a href="https://www.kaggle.com/ashwinbala1999"><i class="fab fa-kaggle ico"></i></a>
+                <a href="https://twitter.com/AshwinBala14"><i class="fab fa-twitter ico"></i></a>
+            </p>
+        </div>
+    </div>
+    <div id="contact-image">
+        <img src="{%static './images/contact.svg'%}" alt="contact-image">
+    </div>
+</section>
+
+{% endblock %}

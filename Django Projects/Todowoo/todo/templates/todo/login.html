@@ -1,0 +1,23 @@
+{% extends 'todo/base.html' %}
+{% block content %}
+{% if user.is_authenticated %}
+<div class="container">
+    <h3 class="display-3">User is logged in</h3>
+    <p class="lead">Logout to view this page</p>
+</div>
+{% else %}
+<div class="container jumbotron">
+    <h3 class="display-3" style="text-align: center;">Login</h3><br>
+    <form method="POST" class="form-group">
+        {%csrf_token%}
+        {{form.as_p}}
+        {% if error %}
+        <div class="alert alert-danger" role="alert">
+            {{error}}
+        </div>
+        {% endif %}
+        <button class="btn btn-primary" type="submit">Login</button>
+    </form>
+</div>
+{% endif %}
+{% endblock %}

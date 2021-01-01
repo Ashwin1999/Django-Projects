@@ -1,0 +1,414 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap");
+:root {
+  --h1: 100vh;
+  --h2: 50vh;
+  --fs1: 18px;
+  --fs2: 14px;
+}
+
+body {
+  margin: 0;
+  min-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: teal;
+}
+
+a:hover {
+  color: darkslategray;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.home section {
+  height: var(--h1);
+  font-size: var(--fs1);
+}
+
+.header, .about, .skills, .contacts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.header #cover-image, .about #cover-image, .skills #cover-image, .contacts #cover-image {
+  flex: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header #cover-image img, .about #cover-image img, .skills #cover-image img, .contacts #cover-image img {
+  pointer-events: none;
+  width: 75%;
+}
+
+.header #cover-text, .about #cover-text, .skills #cover-text, .contacts #cover-text {
+  flex: 0.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header #cover-text #cover-text-content, .about #cover-text #cover-text-content, .skills #cover-text #cover-text-content, .contacts #cover-text #cover-text-content {
+  padding-right: 25px;
+}
+
+.header #cover-text #cover-text-content #hello, .about #cover-text #cover-text-content #hello, .skills #cover-text #cover-text-content #hello, .contacts #cover-text #cover-text-content #hello {
+  font-size: 60px;
+  color: darkslategray;
+}
+
+.header #cover-text #cover-text-content #role, .about #cover-text #cover-text-content #role, .skills #cover-text #cover-text-content #role, .contacts #cover-text #cover-text-content #role {
+  font-size: 20px;
+  color: teal;
+}
+
+.header #about-text, .about #about-text, .skills #about-text, .contacts #about-text {
+  color: darkslategray;
+  flex: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  padding: 0 20px;
+}
+
+.header #about-image, .about #about-image, .skills #about-image, .contacts #about-image {
+  flex: 0.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header #about-image img, .about #about-image img, .skills #about-image img, .contacts #about-image img {
+  pointer-events: none;
+  width: 80%;
+}
+
+.header #skill-image, .about #skill-image, .skills #skill-image, .contacts #skill-image {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header #skill-image img, .about #skill-image img, .skills #skill-image img, .contacts #skill-image img {
+  pointer-events: none;
+  width: 75%;
+}
+
+.header #skill-content, .about #skill-content, .skills #skill-content, .contacts #skill-content {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  width: 100%;
+}
+
+.header #skill-content #progressbars, .about #skill-content #progressbars, .skills #skill-content #progressbars, .contacts #skill-content #progressbars {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header #skill-content #progressbars .pBar, .about #skill-content #progressbars .pBar, .skills #skill-content #progressbars .pBar, .contacts #skill-content #progressbars .pBar {
+  width: 100%;
+}
+
+.header #skill-content #progressbars .pBar #skill-title, .about #skill-content #progressbars .pBar #skill-title, .skills #skill-content #progressbars .pBar #skill-title, .contacts #skill-content #progressbars .pBar #skill-title {
+  font-size: 50px;
+  color: darkslategray;
+}
+
+.header #skill-content #progressbars .pBar .skill-desc, .about #skill-content #progressbars .pBar .skill-desc, .skills #skill-content #progressbars .pBar .skill-desc, .contacts #skill-content #progressbars .pBar .skill-desc {
+  width: 50%;
+}
+
+.header #skill-content #progressbars .pBar .lang, .about #skill-content #progressbars .pBar .lang, .skills #skill-content #progressbars .pBar .lang, .contacts #skill-content #progressbars .pBar .lang {
+  font-size: 20px;
+}
+
+.header #skill-content #progressbars .pBar #myProgress, .about #skill-content #progressbars .pBar #myProgress, .skills #skill-content #progressbars .pBar #myProgress, .contacts #skill-content #progressbars .pBar #myProgress {
+  border-radius: 15px;
+  width: 75%;
+  background-color: #cccccc;
+}
+
+.header #skill-content #progressbars .pBar .myBar, .about #skill-content #progressbars .pBar .myBar, .skills #skill-content #progressbars .pBar .myBar, .contacts #skill-content #progressbars .pBar .myBar {
+  border-radius: 15px;
+  width: 0%;
+  height: 10px;
+  background-color: #6c63ff;
+}
+
+.header #contact-image, .about #contact-image, .skills #contact-image, .contacts #contact-image {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header #contact-image img, .about #contact-image img, .skills #contact-image img, .contacts #contact-image img {
+  pointer-events: none;
+  width: 95%;
+}
+
+.header #contact-info, .about #contact-info, .skills #contact-info, .contacts #contact-info {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header #contact-info #contact-info-content, .about #contact-info #contact-info-content, .skills #contact-info #contact-info-content, .contacts #contact-info #contact-info-content {
+  padding-right: 25px;
+}
+
+.header #contact-info #contact-info-content #contact-title, .about #contact-info #contact-info-content #contact-title, .skills #contact-info #contact-info-content #contact-title, .contacts #contact-info #contact-info-content #contact-title {
+  font-size: 80px;
+  color: darkslategray;
+}
+
+.header #contact-info #contact-info-content #email, .about #contact-info #contact-info-content #email, .skills #contact-info #contact-info-content #email, .contacts #contact-info #contact-info-content #email {
+  font-size: 40px;
+  color: teal;
+}
+
+.header #contact-info #contact-info-content #phone, .about #contact-info #contact-info-content #phone, .skills #contact-info #contact-info-content #phone, .contacts #contact-info #contact-info-content #phone {
+  font-size: 40px;
+  color: teal;
+}
+
+.header #contact-info #contact-info-content #social, .about #contact-info #contact-info-content #social, .skills #contact-info #contact-info-content #social, .contacts #contact-info #contact-info-content #social {
+  font-size: 40px;
+}
+
+.header #contact-info #contact-info-content #social .ico, .about #contact-info #contact-info-content #social .ico, .skills #contact-info #contact-info-content #social .ico, .contacts #contact-info #contact-info-content #social .ico {
+  padding-left: 35px;
+}
+
+.github-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.github-stats p {
+  font-size: 60px;
+  color: darkslategray;
+}
+
+.github-stats .calendar {
+  border: 0px;
+}
+
+.github-stats #git-calendar {
+  width: 75%;
+}
+
+.projects #project-title {
+  font-size: 60px;
+  color: darkslategray;
+}
+
+.projects #project-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.projects #project-container .child {
+  margin-left: 50px;
+  padding-top: 100px;
+}
+
+.projects #project-container .child img {
+  width: 75%;
+}
+
+/* to make image hover */
+.projects #project-container .child img:hover{
+  transform: scale(1.1);
+}
+
+@media (orientation: landscape) {
+  .skills #skill-content {
+    font-size: 10px;
+  }
+  .skills #skill-content #progressbars .pBar #skill-title {
+    font-size: 40px;
+  }
+  .skills #skill-content #progressbars .pBar .lang {
+    font-size: 16px;
+  }
+  .skills #skill-content #progressbars .pBar .myBar {
+    height: 8px;
+  }
+  .projects #project-title {
+    font-size: 50px;
+  }
+  .projects #project-container .child {
+    margin-left: 90px;
+    padding-top: 100px;
+  }
+  .projects #project-container .child img {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .contacts #contact-info #contact-info-content {
+    padding-right: 0px;
+  }
+  .contacts #contact-info #contact-info-content #contact-title {
+    font-size: 40px;
+  }
+  .contacts #contact-info #contact-info-content #email {
+    font-size: 30px;
+  }
+  .contacts #contact-info #contact-info-content #phone {
+    font-size: 30px;
+  }
+  .contacts #contact-info #contact-info-content #social {
+    font-size: 20px;
+  }
+  .contacts #contact-info #contact-info-content #social .ico {
+    padding-left: 20px;
+  }
+  .contacts .projects #project-title {
+    font-size: 40px;
+  }
+  .github-stats p {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .home section {
+    height: var(--h2);
+  }
+  .header #cover-text #cover-text-content, .about #cover-text #cover-text-content, .skills #cover-text #cover-text-content, .contacts #cover-text #cover-text-content {
+    padding-right: 0px;
+  }
+  .header #cover-text #cover-text-content #hello, .about #cover-text #cover-text-content #hello, .skills #cover-text #cover-text-content #hello, .contacts #cover-text #cover-text-content #hello {
+    font-size: 30px;
+  }
+  .header #cover-text #cover-text-content #role, .about #cover-text #cover-text-content #role, .skills #cover-text #cover-text-content #role, .contacts #cover-text #cover-text-content #role {
+    font-size: 15px;
+  }
+  .header #about-text, .about #about-text, .skills #about-text, .contacts #about-text {
+    font-size: 15px;
+  }
+  .header #skill-content, .about #skill-content, .skills #skill-content, .contacts #skill-content {
+    font-size: 10px;
+  }
+  .header #skill-content #progressbars .pBar #skill-title, .about #skill-content #progressbars .pBar #skill-title, .skills #skill-content #progressbars .pBar #skill-title, .contacts #skill-content #progressbars .pBar #skill-title {
+    font-size: 25px;
+  }
+  .header #skill-content #progressbars .pBar .lang, .about #skill-content #progressbars .pBar .lang, .skills #skill-content #progressbars .pBar .lang, .contacts #skill-content #progressbars .pBar .lang {
+    font-size: 15px;
+  }
+  .header #skill-content #progressbars .pBar .myBar, .about #skill-content #progressbars .pBar .myBar, .skills #skill-content #progressbars .pBar .myBar, .contacts #skill-content #progressbars .pBar .myBar {
+    height: 5px;
+  }
+  .header #contact-info #contact-info-content, .about #contact-info #contact-info-content, .skills #contact-info #contact-info-content, .contacts #contact-info #contact-info-content {
+    padding-right: 0px;
+  }
+  .header #contact-info #contact-info-content #contact-title, .about #contact-info #contact-info-content #contact-title, .skills #contact-info #contact-info-content #contact-title, .contacts #contact-info #contact-info-content #contact-title {
+    font-size: 40px;
+  }
+  .header #contact-info #contact-info-content #email, .about #contact-info #contact-info-content #email, .skills #contact-info #contact-info-content #email, .contacts #contact-info #contact-info-content #email {
+    font-size: 20px;
+  }
+  .header #contact-info #contact-info-content #phone, .about #contact-info #contact-info-content #phone, .skills #contact-info #contact-info-content #phone, .contacts #contact-info #contact-info-content #phone {
+    font-size: 20px;
+  }
+  .header #contact-info #contact-info-content #social, .about #contact-info #contact-info-content #social, .skills #contact-info #contact-info-content #social, .contacts #contact-info #contact-info-content #social {
+    font-size: 20px;
+  }
+  .header #contact-info #contact-info-content #social .ico, .about #contact-info #contact-info-content #social .ico, .skills #contact-info #contact-info-content #social .ico, .contacts #contact-info #contact-info-content #social .ico {
+    padding-left: 20px;
+  }
+  .projects #project-title {
+    font-size: 30px;
+  }
+  .projects #project-container .child {
+    padding-top: 50px;
+  }
+  .projects #project-container .child img {
+    width: 75%;
+  }
+  .github-stats p {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .home section {
+    height: var(--h2);
+  }
+  .header #cover-text #cover-text-content #hello, .about #cover-text #cover-text-content #hello, .skills #cover-text #cover-text-content #hello, .contacts #cover-text #cover-text-content #hello {
+    font-size: 20px;
+  }
+  .header #cover-text #cover-text-content #role, .about #cover-text #cover-text-content #role, .skills #cover-text #cover-text-content #role, .contacts #cover-text #cover-text-content #role {
+    font-size: 10px;
+  }
+  .header #about-text, .about #about-text, .skills #about-text, .contacts #about-text {
+    font-size: 10px;
+  }
+  .header #skill-content, .about #skill-content, .skills #skill-content, .contacts #skill-content {
+    font-size: 10px;
+  }
+  .header #skill-content #progressbars .pBar #skill-title, .about #skill-content #progressbars .pBar #skill-title, .skills #skill-content #progressbars .pBar #skill-title, .contacts #skill-content #progressbars .pBar #skill-title {
+    font-size: 20px;
+  }
+  .header #skill-content #progressbars .pBar .lang, .about #skill-content #progressbars .pBar .lang, .skills #skill-content #progressbars .pBar .lang, .contacts #skill-content #progressbars .pBar .lang {
+    font-size: 10px;
+  }
+  .header #skill-content #progressbars .pBar .myBar, .about #skill-content #progressbars .pBar .myBar, .skills #skill-content #progressbars .pBar .myBar, .contacts #skill-content #progressbars .pBar .myBar {
+    height: 5px;
+  }
+  .header #contact-info #contact-info-content, .about #contact-info #contact-info-content, .skills #contact-info #contact-info-content, .contacts #contact-info #contact-info-content {
+    padding-right: 0px;
+  }
+  .header #contact-info #contact-info-content #contact-title, .about #contact-info #contact-info-content #contact-title, .skills #contact-info #contact-info-content #contact-title, .contacts #contact-info #contact-info-content #contact-title {
+    font-size: 20px;
+  }
+  .header #contact-info #contact-info-content #email, .about #contact-info #contact-info-content #email, .skills #contact-info #contact-info-content #email, .contacts #contact-info #contact-info-content #email {
+    font-size: 10px;
+  }
+  .header #contact-info #contact-info-content #phone, .about #contact-info #contact-info-content #phone, .skills #contact-info #contact-info-content #phone, .contacts #contact-info #contact-info-content #phone {
+    font-size: 10px;
+  }
+  .header #contact-info #contact-info-content #social, .about #contact-info #contact-info-content #social, .skills #contact-info #contact-info-content #social, .contacts #contact-info #contact-info-content #social {
+    font-size: 10px;
+  }
+  .header #contact-info #contact-info-content #social .ico, .about #contact-info #contact-info-content #social .ico, .skills #contact-info #contact-info-content #social .ico, .contacts #contact-info #contact-info-content #social .ico {
+    padding-left: 10px;
+  }
+  .projects #project-title {
+    font-size: 20px;
+  }
+  .projects #project-container .child {
+    padding-top: 40px;
+    margin-left: 15px;
+  }
+  .projects #project-container .child img {
+    width: 75%;
+  }
+  .github-stats p {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,38 @@
+{% extends 'todo/base.html' %}
+{% block content %}
+<div class="container jumbotron">
+    <h4 class="display-4">
+        {{todo.title}}
+    </h4>
+    <form method="POST" class="form-group">
+        <div class="form-group">
+            {% csrf_token %}
+            {{form.as_p}}
+            {% if error %}
+            <div class="alert alert-danger" role="alert">
+                {{error}}
+            </div>
+            {% endif %}
+            <button class="btn btn-primary">Save</button>
+        </div>
+    </form>
+    <br>
+    <ul class="nav">
+        <li class="nav-item">
+            <form method="POST" action="{% url 'completetodo' todo.id %}">
+                {% csrf_token %}
+                <button class="btn btn-primary"
+                    style="display: inline-block;">Complete</button>
+            </form>
+        </li>
+        <li class="nav-item">
+            <form method="POST" action="{% url 'deletetodo' todo.id %}">
+                {% csrf_token %}
+                <button class="btn btn-danger"
+                    style="display: inline-block; margin-left: 20px;">Delete</button>
+            </form>
+        </li>
+    </ul>
+    <br><br>
+</div>
+{% endblock %}

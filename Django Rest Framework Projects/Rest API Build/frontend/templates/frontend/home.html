@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App Django Rest Framework</title>
+</head>
+
+<body>
+
+    <script>
+        console.log("hello")
+
+        function test() {
+            let url = "http://127.0.0.1:8000/api/task-list/"
+            fetch(url)
+                .then((resp) => resp.json())
+                .then(function (data) {
+                    console.log(data)
+                })
+        }
+
+        test()
+    </script>
+</body>
+
+</html>

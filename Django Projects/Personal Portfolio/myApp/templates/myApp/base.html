@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- cdns and stuff -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- github contribution calendar -->
+    <!-- Include the library. -->
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+
+    <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <!-- link to stylesheet -->
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+</head>
+
+<body>
+
+    <!-- {% include 'myApp/navbar.html' %} -->
+    <main class="home">
+        {% block content %}
+        <!-- header [done]-->
+        <!-- about [done]-->
+        <!-- experience [done]-->
+        <!-- skills [done]-->
+        <!-- recent projects [done]-->
+        <!-- github stats [done]-->
+        <!-- contact info [done]-->
+        {% endblock %}
+    </main>
+    <!-- animate on scroll -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+    <!-- github contribution calendar -->
+    <script>
+        GitHubCalendar(".calendar", "ashwin1999",
+            {
+                responsive: true,
+                tooltips: true,
+                global_stats: false,
+                summary_text: ' '
+            });
+    </script>
+    <!-- custom scripts -->
+    <script src="{%static 'js/script.js'%}"></script>
+</body>
+
+</html>
